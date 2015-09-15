@@ -1,0 +1,426 @@
+/*#FFB6D4*/
+body, html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    font-smooth: always;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    font: normal normal 400 100%/1 'Lato', sans-serif;
+    position: relative;
+    /*overflow: hidden;*/
+    margin:0;
+    padding:0;
+} 
+body{
+    background: rgba(0, 0, 0, 0) url("bk.png") repeat fixed 100% 100%;
+    display: block;
+    margin:0;
+    padding:0;
+    position: absolute;
+    width: 100%;
+}   
+h4 {
+    font-family: 'PlutoExtraLight';
+    font-size: 1.375rem;
+    line-height: 1.18;
+}
+.l-container {
+    width: 70%;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 1025px){
+.l-container {
+    width: 75%;
+    margin: 0 auto;
+}
+}
+@media only screen and (min-width: 768px){
+.l-container {
+    width: 80%;
+    margin: 0 auto;
+}
+}
+@media only screen and (min-width: 640px){
+.l-container {
+    width: 85%;
+    margin: 0 auto;
+}
+}
+.bg-container {
+    position: absolute;
+    z-index: 0;
+    /*top: 0;*/
+    /*bottom: 0;*/
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+    opacity: 0.6;
+    background: #62c3de;
+    background: -moz-linear-gradient(-45deg, #62c3de 0%, #f5b5d2 50%, #e6007e 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #62c3de), color-stop(50%, #f5b5d2), color-stop(100%, #e6007e));
+    background: -webkit-linear-gradient(-45deg, #62c3de 0%, #f5b5d2 50%, #e6007e 100%);
+    background: -o-linear-gradient(-45deg, #62c3de 0%, #f5b5d2 50%, #e6007e 100%);
+    background: -ms-linear-gradient(-45deg, #62c3de 0%, #f5b5d2 50%, #e6007e 100%);
+    background: linear-gradient(135deg, #62c3de 0%,#f5b5d2 50%,#e6007e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#62c3de', endColorstr='#e6007e',GradientType=1 );
+    -webkit-animation: huerotator 3s infinite alternate;
+}
+@-webkit-keyframes huerotator {
+    0% {
+        -webkit-filter:hue-rotate(0deg)
+    }
+    100% {
+        -webkit-filter:hue-rotate(-50deg)
+    }
+}
+.backtext{
+    font-size: 48px;
+    margin-top: -250px;
+}
+.backtext p:first-child{
+    text-align: left；
+}
+.backtext p:last-child{
+    text-align: right;
+}
+@media only screen and (min-width: 1025px){
+.love-message {
+    margin-top: 12px;
+}
+}
+.love-message {
+    /*padding: 0 110px;*/
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+.love-message figure {
+    position: relative;
+    margin: 8px auto 10px;
+    width: 142px;
+    height: 128px;
+    top: 0px;
+    opacity: 1;
+    transform: scale(1);
+}
+*[data-animatable] {
+    opacity: 0;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+@media only screen and (min-width: 1025px){
+.love-message figure .heart-colored.animating {
+    -moz-animation: shade 1.2s infinite linear;
+    -o-animation: shade 1.2s infinite linear;
+    -webkit-animation: shade 1.2s infinite linear;
+    animation: shade 1.2s infinite linear;
+}
+}
+.love-message figure .heart-colored {
+    display: block;
+    width: 0;
+    height: 100%;
+    background-image: url("loading-heart.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    -webkit-transition: width 1s ease;
+    transition: width 1s ease;
+    width:100%;
+}
+.love-message figure img {
+    display: none;
+}
+.love-message figure .ribbon {
+    width: 269px;
+    height: 45px;
+    background: transparent url(love-ribbon.png) 0 0 no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -134.5px;
+    margin-top: -22.5px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    background-size: 100% 100%;
+    opacity: 1;
+    display: inline-block;
+    visibility: visible;
+    transform: scaleX(1) scaleY(1);
+}
+@keyframes shade {
+  0% {
+      opacity: 1;
+      transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -webkit-transform:scale(1.05); /* Safari and Chrome */
+      -o-transform:scale(1.05);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(0.95);
+      -moz-transform: scale(0.95);
+      -webkit-transform:scale(0.95); /* Safari and Chrome */
+      -o-transform:scale(0.95);
+  }
+}
+[layout] {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+@media only screen and (max-width: 720px){
+[layout] {
+    box-sizing: border-box;
+    display: block;
+}
+}
+[layout=row] {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+[layout-padding], [layout-padding]>[flex-gt-sm], [layout-padding]>[flex-lt-lg], [layout-padding]>[flex-md], [layout-padding]>[flex] {
+    padding: 8px;
+}
+[layout-margin], [layout-margin]>[flex-gt-sm], [layout-margin]>[flex-lt-lg], [layout-margin]>[flex-md], [layout-margin]>[flex] {
+    margin: 8px;
+}
+[layout-fill] {
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+}
+[layout=row] {
+    /*background-color: #fff;*/
+    position: relative;
+    font-size: 18px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+}
+[layout=row][layout-margin] {
+    margin: 16px 8px;
+}
+[flex] {
+    outline: none;
+    box-sizing: border-box;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+[flex="50"]{
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    text-align: center;
+}
+[flex="15"]{
+    -webkit-flex: 0 0 15%;
+    -ms-flex: 0 0 15%;
+    flex: 0 0 15%;
+    text-align: left;
+}
+[flex="25"]{
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    text-align: right;
+}
+[flex="60"]{
+    -webkit-flex: 0 0 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    text-align: center;
+    overflow: hidden;
+}
+ul{
+    list-style:none;
+    opacity: 0.75;
+}
+ul li{
+    height:145px;
+}
+ul li img{
+    margin:10px;
+    width:100px;
+}
+
+/******cake******/
+.cake-body {
+    margin: 4em auto 0;
+    overflow: hidden;
+    text-align: center;
+}
+#cake {
+  /*display: block;*/
+  position: relative;
+  margin: -20em auto 0 auto;
+}
+
+/* ============================================== Candle
+*/
+.velas {
+  background: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-top: 100px;
+  width: 5px;
+  height: 35px;
+  -webkit-transform: translateY(-300px);
+  -ms-transform: translateY(-300px);
+  transform: translateY(-300px);
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: in 500ms 6s ease-out forwards;
+  animation: in 500ms 6s ease-out forwards;
+}
+/*@media only screen and (max-width: 720px){
+  .velas{
+    left: 42%;
+  }
+}*/
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}
+
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+/* ============================================== Fire
+*/
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.2px;
+  width: 6.66666667px;
+  height: 18px;
+}
+
+.fuego:nth-child(1) {
+  -webkit-animation: fuego 2s 6.5s infinite;
+  animation: fuego 2s 6.5s infinite;
+}
+
+.fuego:nth-child(2) {
+  -webkit-animation: fuego 1.5s 6.5s infinite;
+  animation: fuego 1.5s 6.5s infinite;
+}
+
+.fuego:nth-child(3) {
+  -webkit-animation: fuego 1s 6.5s infinite;
+  animation: fuego 1s 6.5s infinite;
+}
+
+.fuego:nth-child(4) {
+  -webkit-animation: fuego 0.5s 6.5s infinite;
+  animation: fuego 0.5s 6.5s infinite;
+}
+
+.fuego:nth-child(5) {
+  -webkit-animation: fuego 0.2s 6.5s infinite;
+  animation: fuego 0.2s 6.5s infinite;
+}
+
+/* ============================================== Animation Fire
+*/
+@-webkit-keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(-20px) scale(0);
+    transform: translateY(-20px) scale(0);
+  }
+}
+@keyframes fuego {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(-20px) scale(0);
+    transform: translateY(-20px) scale(0);
+  }
+}
+@-webkit-keyframes in {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes in {
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.text {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  position: relative;
+  /*font-style: italic;*/
+  text-align: center;
+}
+.text h1 {
+  font-size: 32px;
+}
+
+#words{font-family:"sans-serif";width:500px;font-size:24px;color:#666}
+#messages{display:none}
+#elapseClock .digit{font-family:"digit";font-size:36px}
+#loveu{padding:5px;font-size:22px;margin-top:80px;margin-right:120px;text-align:right;display:none}
+#loveu .signature{margin-top:10px;font-size:20px;font-style:italic}
+#clickSound{display:none}
+#code{width:auto;height:400px;color:#fff;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:15px;text-align:left;}
+#code .string{color:#2a36ff}
+#code .keyword{color:#7f0055;font-weight:bold}
+#code .placeholder{margin-left:15px}#code .space{margin-left:7px}
+#code .comments{color:#3f7f5f}
+#copyright{margin-top:10px;text-align:center;width:100%;color:#666}
+#errorMsg{width:100%;text-align:center;font-size:24px;position:absolute;top:100px;left:0}
+#copyright a{color:#666}
