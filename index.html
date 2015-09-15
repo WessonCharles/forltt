@@ -5,6 +5,7 @@
     <title>For LiuTingting</title>
     <meta name="description" content="It's a ">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="main.css">
     <script src="jquery.js"></script>
     <script src="jquery.typewriter.js"></script>
@@ -18,17 +19,17 @@
             <img src="/assetsf/img/loading-heart-gray.png" alt="" style="display: none;">
             <span class="ribbon" style="opacity: 1; display: inline-block; visibility: visible; transform: scaleX(1) scaleY(1);"></span>
           </figure>
-          <h4 data-animatable="true" data-delay-in="0" data-animation-in="fadeOut" data-animation-out="fadeOut" class="" style="opacity: 1; display: block; transform: translateY(0px);">For LiuTingting.</h4>
+          <h4 id="one" data-animatable="true" data-delay-in="0" data-animation-in="fadeOut" data-animation-out="fadeOut" class="" style="opacity: 1; display: block; transform: translateY(0px);">For LiuTingting.</h4>
       </div>
       <b class="backtext">
         <p>我错过了你的以往，</p>
         <p>不想再错过你的今后</p>
       </b>
-      <div class="text">
+      <div class="text hide animated" id="happy">
         <h1>happy birthday!</h1>
       </div> 
       <div layout="row" layout-margin layout-fill layout-padding>
-        <div class="velas">
+        <div class="velas hide">
                   <div class="fuego"></div>
                   <div class="fuego"></div>
                   <div class="fuego"></div>
@@ -186,46 +187,64 @@
             </svg>
             </div>
       </div>
+
       <div layout="row" layout-margin="" layout-fill="" layout-padding="" class="ng-scope">
-        
+      <div id="code">  
         <div flex="50">
-            <h5>Now</h5>
-            <div id="code">
+            <h5></h5>
+            
               <span class="comments">/**</span><br />
               <span class="space"/><span class="comments">*2015—09-20 00:00:00.,</span><br />
               <span class="space"/><span class="comments">*/</span><br />
-              送你<span class="keyword">两</span> 个小礼物<br />
+              <h4>这是个伟大的日子，22年前的今天——大便妹婷娘娘：<span class="keyword">刘婷婷</span>诞生了。</h4>
+              <br/>
+              三个小东西送给你<br/>
 
-              <span class="comments">/**</span><br />
-              <span class="space"/><span class="comments">*第一件,</span><br />
-              <span class="space"/><span class="comments">*/</span><br />
-
-              <span class="comments">// 它代表我对你说. </span><br />
-              你是唯一的;<br />
-              <span class="comments">// 它是生命和健康的象征.</span><br />
-              希望你不要再吃那么多雪糕，伤身体 二货！<br />
+              <span class="comments">// 小坠子. </span><br />
+              它说：<span class="keyword">你是唯一的，愿健康陪你一起走过漫长岁月；不要再吃那么多雪糕！</span><br />
               
-              <span class="comments">/**</span><br />
-              <span class="space"/><span class="comments">*第二件,</span><br />
-              <span class="space"/><span class="comments">*/</span><br />
-
-              <span class="comments">// 它经历了些波折. </span><br />
-              它让你美丽动人;<br />
-              <span class="comments">// 它本来是邂逅，可是难以估计的惊喜值让我换掉了它.</span><br />
-              它应该是你期待的。<br />              
-              <br>
-              <br>
-              For you!❤️<br />
-            </div>
+              <span class="comments">// 小妆子.</span><br />
+              它说：<span class="keyword">它让你美丽动人，它本来是场邂逅，可它最后还是选择成为你的恒久美丽。</span><br />
+              
+              <span class="comments">// 小常子</span><br>
+              <span class="keyword">他善良，神秘，专情，他倾国倾城，他随叫随到，他向往并勇于尝试所有，他希望能陪你做你喜欢的任何事情;</span><br />
+              
+              美丽动人的大便妹，永远年轻，永远美丽！            
         </div>
         <div flex="50" class="md-raised md-grey md-button md-default-theme">
-            <h5>Future</h5>
+            <h5>小常子旁白：</h5>
+
+            我不知道自己曾经修了多久，才能遇见你<br />
+            也不知道世界安排了多少次巧合，才把你送到我面前<br>
+            我想抓住，再也 不放<br/>
+            <br/>
+            <br/>
+            刘婷婷女士，现正式邀你出任常惠强先生的女朋友一职，你愿意吗？<br>
+            1.愿意，2.非常愿意，3.极其愿意<br>
+            大声说出你的选择！<br>
+        </div>
         </div>
       </div> 
     </div>
     <script>
       $(function(){
-        $("#code").typewriter();
+        $(document).ready(function($) {
+          $("body").scrollTop(0);
+        });
+        $(document).scroll(function(e){
+          var t = $("body");
+          var h = t.scrollTop();
+          console.log(h)
+          var y = 100 - h/18;
+          $("body").css({"background-position":"100% "+y+"%"});
+          console.log($("#one")[0].offsetTop)
+          if(h>$("#one")[0].offsetTop){
+            console.log("yes")
+            $("#happy").removeClass('hide').addClass('bounceInUp');
+            $("[layout]:first .velas").removeClass('hide');
+          }
+        })
+        $("#code").typewriter(200);
       })
     </script>
   </body>

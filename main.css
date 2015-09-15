@@ -16,12 +16,16 @@ body, html {
     padding:0;
 } 
 body{
-    background: rgba(0, 0, 0, 0) url("bk.png") repeat fixed 100% 100%;
+    /*background: rgba(0, 0, 0, 0) url("bk.png") repeat fixed 100% 100%;*/
     display: block;
     margin:0;
     padding:0;
     position: absolute;
     width: 100%;
+    background-image: url("bk.png");
+    background-position: 100% 100%;
+    background-repeat: repeat;
+    background-attachment: inherit;
 }   
 h4 {
     font-family: 'PlutoExtraLight';
@@ -115,13 +119,11 @@ h4 {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-@media only screen and (min-width: 1025px){
 .love-message figure .heart-colored.animating {
     -moz-animation: shade 1.2s infinite linear;
     -o-animation: shade 1.2s infinite linear;
     -webkit-animation: shade 1.2s infinite linear;
     animation: shade 1.2s infinite linear;
-}
 }
 .love-message figure .heart-colored {
     display: block;
@@ -226,6 +228,11 @@ h1,h2,h3,h4,h5,h6{
     flex: 0 0 50%;
     text-align: center;
 }
+@media only screen and (max-width: 720px){
+[flex="50"]{
+    text-align: left;
+}
+}  
 [flex="15"]{
     -webkit-flex: 0 0 15%;
     -ms-flex: 0 0 15%;
@@ -410,13 +417,18 @@ ul li img{
   font-size: 32px;
 }
 
+.hide{
+  display: none;
+}
+
+
 #words{font-family:"sans-serif";width:500px;font-size:24px;color:#666}
 #messages{display:none}
 #elapseClock .digit{font-family:"digit";font-size:36px}
 #loveu{padding:5px;font-size:22px;margin-top:80px;margin-right:120px;text-align:right;display:none}
 #loveu .signature{margin-top:10px;font-size:20px;font-style:italic}
 #clickSound{display:none}
-#code{width:auto;height:400px;color:#fff;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:15px;text-align:left;}
+#code{width:auto;height:100%;position:relative;min-height:500px;color:#fff;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:15px;text-align:left;}
 #code .string{color:#2a36ff}
 #code .keyword{color:#7f0055;font-weight:bold}
 #code .placeholder{margin-left:15px}#code .space{margin-left:7px}
