@@ -492,7 +492,7 @@ html, body {
     width: 100%;
 }
 .fp-tableCell {
-    padding-top:20px;
+    /*padding-top:20px;*/
     display: table-cell;
     vertical-align: middle;
     width: 100%;
