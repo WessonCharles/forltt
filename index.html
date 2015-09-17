@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>For LiuTingting</title>
-    <meta name="description" content="It's a ">
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <meta name="description" content="This is a gift to a girl who i fall in love with.">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="main.css">
@@ -149,7 +153,7 @@
                   c0-5.143,0-15.427,0-20.568c0-7.333,0-21.998,0-29.33c0-5.523,0-16.569,0-22.092c0-3.295,0-9.885,0-13.181
                   C95.188,2.551,97.353,0,100,0c2.648,0,4.812,2.551,4.812,5.669c0,3.248,0,9.743,0,12.991c0,5.428,0,16.284,0,21.711
                   c0,7.618,0,22.854,0,30.472c0,4.952,0,14.854,0,19.807C104.812,96.292,104.812,107.576,104.812,113.216z">
-                        <animate id="crema" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0 0 1 1; 0.25 0 1 1; 0 0 1 1; 0 0 0.58 1" begin="bizcocho_3.end" dur="2s" fill="freeze" values="
+                        <animate id="crema" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0 0 1 1; 0.25 0 1 1; 0 0 1 1; 0 0 0.58 1" begin="bizcocho_3.end" dur="0.5s" fill="freeze" values="
                                           M104.812,113.216c0,3.119-2.164,5.67-4.812,5.67c-2.646,0-4.812-2.551-4.812-5.67c0-5.594,0-16.782,0-22.375
                   c0-5.143,0-15.427,0-20.568c0-7.333,0-21.998,0-29.33c0-5.523,0-16.569,0-22.092c0-3.295,0-9.885,0-13.181
                   C95.188,2.551,97.353,0,100,0c2.648,0,4.812,2.551,4.812,5.669c0,3.248,0,9.743,0,12.991c0,5.428,0,16.284,0,21.711
@@ -235,7 +239,7 @@
                   我想紧紧抓着，不放手<br>
                   <br>
                   <br>
-                  刘婷婷女士，现正式邀你出任常惠强先生的女朋友一职，你愿意吗？😊<br>
+                  <span class="keyword">刘婷婷</span>女士，现正式邀你出任<span class="keyword">常惠强</span>先生的<span class="keyword">女朋友</span>一职，你愿意吗？😊<br>
                   1.愿意，2.非常愿意，3.极其愿意<br>
                   请正面回答🐶<br>
               </div>
@@ -291,7 +295,7 @@
                   $("#happy").removeClass('hide').addClass('bounceInUp');
                   setTimeout(function(){
                     $("[layout]:first .velas").removeClass('hide');
-                  },3500)
+                  },1000)
                   // setTimeout(function(){
                   //   $("#fp-nav ul li:eq(2) a").trigger("click");
                   // },7000)
@@ -324,9 +328,10 @@
                   // },time);
                 }
                 if(index == 3){
+                  $("#code").show();
                   $("#gift").ticker({
-                    rate:        10,
-                    delay:       8000
+                    rate:        100,
+                    delay:       4000
                   }).trigger("play").trigger("stop");
                   // setTimeout(function(){
                   //   $("#fp-nav ul li:eq(3) a").trigger("click");
